@@ -15,9 +15,10 @@ export class UsersListComponent implements OnInit {
 
   searchQuery: string = '';
   filteredUsers: any;
-  
+  user: any;
+
   constructor(private userService: UserService) {
-   }
+  }
 
   ngOnInit() {
     this.getUsers();
@@ -27,6 +28,9 @@ export class UsersListComponent implements OnInit {
     this.userService.getAll()
       .subscribe(data => {
         this.users = data;
+        this.user = this.users[0];
+        this.showSelectedUser(this.user, 0);
+        this.currentUser = this.user;
       },
         error => { console.log(error); });
   }
