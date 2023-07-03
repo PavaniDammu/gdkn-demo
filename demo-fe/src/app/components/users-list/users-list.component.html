@@ -1,0 +1,44 @@
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" [(ngModel)]="searchQuery" (input)="onSearch()" placeholder="Search by username" />
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h4>Users List</h4>
+        <ul class="list-group">
+            <li class="list-group-item usersList" matTooltip="Click to get user details" *ngFor="let user of users | filterUser: searchQuery; let i = index" [class.active]="i == currentIndex" (click)="showSelectedUser(user, i)">
+                <span [innerHTML]="(user.userName) | highlightSearch: searchQuery"></span>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="users?.length === 0">
+        <div class="no-results ml-1">
+            <p>No results</p>
+        </div>
+    </div>
+    <div class="col-md-6" [ngClass]="{'userDetails': currentUser}">
+        <div *ngIf="currentUser">
+            <h5>Details of selected user</h5>
+            <div>
+                <label class="textFont">FirstName:  </label> {{ currentUser.firstName }}
+            </div>
+            <div>
+                <label class="textFont">LastName:  </label> {{ currentUser.lastName }}
+            </div>
+            <div>
+                <label class="textFont">Email:  </label> {{ currentUser.email }}
+            </div>
+            <div>
+                <label class="textFont">Phone:  </label> {{ currentUser.phone }}
+            </div>
+            <div>
+                <label class="textFont">Gender:  </label> {{ currentUser.gender }}
+            </div>
+
+            <a class="btn mt-2 userEdit" routerLink="/users/{{ currentUser.id }} ">
+                <i class="fas fa-edit edit-icon"></i> Edit</a>
+        </div>
+    </div>
+</div>

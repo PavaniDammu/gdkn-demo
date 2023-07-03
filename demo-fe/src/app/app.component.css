@@ -1,0 +1,24 @@
+.bg-brown {
+    background-color: #953601;
+}
+
+.right-section {
+    justify-content: right;
+}
+
+a.nav-link {
+    color: white !important;
+}
+
+
+/* .main-container {
+    margin: 0;
+} */
+
+.listUserTab {
+    padding-right: 50px;
+}
+
+.marginLeft {
+    margin-left: 1rem !important;
+}

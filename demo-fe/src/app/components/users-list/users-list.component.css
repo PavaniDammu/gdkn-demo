@@ -1,0 +1,44 @@
+.list {
+    text-align: left;
+    max-width: 750px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    padding: 4px;
+    width: 73%;
+}
+
+.search-icon {
+    position: absolute;
+    top: 10px;
+    right: 133px;
+    color: #919ca7;
+    pointer-events: none;
+}
+
+.usersList.active {
+    color: #495057;
+    background-color: #e8d9d9;
+    border-color: #E6E6E6;
+}
+
+.userEdit {
+    background-color: #e8d9d9;
+    border-color: #E6E6E6;
+}
+
+.userList {
+    cursor: pointer;
+}
+
+.userDetails {
+    background-color: #e8d9d9;
+}
+
+.textFont {
+    font-weight: 500;
+}

@@ -1,0 +1,20 @@
+<div>
+    <nav class="navbar navbar-expand navbar-dark bg-brown">
+        <a href="#" class="navbar-brand marginLeft">GDKN demo</a>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse right-section" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item listUserTab">
+                    <a routerLink="users" class="nav-link">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="add" class="nav-link">Add</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-3 main-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

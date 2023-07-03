@@ -1,0 +1,13 @@
+.edit-form {
+    max-width: 300px;
+    margin: auto;
+}
+
+.deletBtn {
+    margin-right: 1rem;
+    background-color: #e8d9d9;
+}
+
+.updateBtn {
+    background-color: #e8d9d9;
+}
